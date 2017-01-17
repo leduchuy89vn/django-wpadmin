@@ -6,7 +6,7 @@ Django WP Admin
 `WordPress <http://wordpress.org/>`_ look and feel for `Django <http://www.djangoproject.com/>`_ administration panel.
 ----------------------------------------------------------------------------------------------------------------------
 
-.. image:: https://raw.github.com/barszczmm/django-wpadmin/master/docs/images/django-wpadmin.png
+.. image:: https://raw.github.com/leduchuy89vn/django-wpadmin/master/docs/images/django-wpadmin.png
 
 
 Features
@@ -72,8 +72,24 @@ Basic configuration
     )
 
 
-* Add `django.core.context_processors.request <https://docs.djangoproject.com/en/dev/ref/templates/api/#django-core-context-processors-request>`_ to `TEMPLATE_CONTEXT_PROCESSORS <https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-TEMPLATE_CONTEXT_PROCESSORS>`_ setting.
+* Add `django.core.context_processors.request <https://docs.djangoproject.com/en/dev/ref/templates/api/#django-core-context-processors-request>`_ to `TEMPLATES->'OPTIONS' <https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-TEMPLATES>`_ setting as bellow:
 
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.core.context_processors.request',
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 
 Documentation
 -------------
@@ -91,7 +107,7 @@ Translations
 Troubleshooting
 ---------------
 
-Please create an `issue on GitHub <https://github.com/barszczmm/django-wpadmin/issues>`_ if you have any problems or requests.
+Please create an `issue on GitHub <https://github.com/leduchuy89vn/django-wpadmin/issues>`_ if you have any problems or requests.
 
 
 Credits
