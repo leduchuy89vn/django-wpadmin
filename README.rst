@@ -86,6 +86,21 @@ Basic configuration
 		    },
 		]
 
+* Add basic menu to project settings.py file as bellow::
+
+		WPADMIN = {
+		    'admin': {
+		        'title': 'Datafeed',
+		        'menu': {
+		            'top': 'wpadmin.menu.menus.BasicTopMenu',
+		            'left': 'wpadmin.menu.menus.BasicLeftMenu',
+		        },
+		        'dashboard': {
+		            'breadcrumbs': True,
+		        },
+		    }
+		}
+
 Documentation
 -------------
 
