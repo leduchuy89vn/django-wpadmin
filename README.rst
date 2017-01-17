@@ -51,14 +51,9 @@ Try ``test_project`` `here <http://django-wpadmin.dev.barszcz.info>`_ or downloa
 Installation
 ------------
 
-* Install django-wpadmin from `PyPI <https://pypi.python.org/pypi/django-wpadmin>`_::
+* Install from GitHub::
 
-    pip install django-wpadmin
-
-
-* Or from GitHub::
-
-    pip install git+https://github.com/barszczmm/django-wpadmin.git#egg=django-wpadmin
+    pip install git+https://github.com/leduchuy89vn/django-wpadmin.git#egg=django-wpadmin
 
 
 
@@ -72,24 +67,24 @@ Basic configuration
     )
 
 
-* Add `django.core.context_processors.request <https://docs.djangoproject.com/en/dev/ref/templates/api/#django-core-context-processors-request>`_ to `TEMPLATES->'OPTIONS' <https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-TEMPLATES>`_ setting as bellow:
+* Add `django.core.context_processors.request <https://docs.djangoproject.com/en/dev/ref/templates/api/#django-core-context-processors-request>`_ to `TEMPLATES->'OPTIONS' <https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-TEMPLATES>`_ setting as bellow::
 
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.core.context_processors.request',
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
-]
+		TEMPLATES = [
+		    {
+		        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+		        'DIRS': [],
+		        'APP_DIRS': True,
+		        'OPTIONS': {
+		            'context_processors': [
+		                'django.core.context_processors.request',
+		                'django.template.context_processors.debug',
+		                'django.template.context_processors.request',
+		                'django.contrib.auth.context_processors.auth',
+		                'django.contrib.messages.context_processors.messages',
+		            ],
+		        },
+		    },
+		]
 
 Documentation
 -------------
